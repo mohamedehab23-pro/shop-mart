@@ -16,11 +16,11 @@ import Image from 'next/image'
 
 export default function AllOrders() {
 const [allOrdersData, setAllOrdersData] = useState<allordersI[]| null>(null)
-
+const baseUrl=process.env.NEXT_URL
   const [isloading, setIsLoading] = useState(false)
 async function GetUserOrders() {
   setIsLoading(true)
-        const idResponse = await fetch(`/api/get-id-from-token`)
+        const idResponse = await fetch(`${baseUrl}/api/get-id-from-token`)
         const userId = await idResponse.json()
         const res = await fetch(`https://ecommerce.routemisr.com/api/v1/orders/user/${userId}`)
         const data = await res.json()

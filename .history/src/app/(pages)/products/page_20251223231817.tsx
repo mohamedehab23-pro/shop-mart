@@ -28,6 +28,7 @@ const wishlistRes = await fetch(`${process.env.NEXT_URL}/api/get-wishlist`, {
     },
   });
   const wishlistData = await wishlistRes.json()
+  console.log("Full Wishlist Data:", wishlistData); 
 const wishlistIds = wishlistData?.data?.map((item: any) => item._id) || [];
   return <>
   <div className='container py-8 mx-auto grid  grid-cols-1 sm:grid-cols-2 pt-3 md:grid-cols-3 lg:grid-cols-4 gap-3'>

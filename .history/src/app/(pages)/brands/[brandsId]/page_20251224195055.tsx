@@ -29,6 +29,7 @@ const wishlistRes = await fetch(`${process.env.NEXT_URL}/api/get-wishlist`, {
     },
   });
   const wishlistData = await wishlistRes.json()
+  console.log("Full Wishlist Data:", wishlistData); 
 const wishlistIds = wishlistData?.data?.map((item: any) => item._id) || [];
   return<>
 

@@ -23,6 +23,7 @@ export default async function CategoryDetails({params}:{params:Params}) {
       },
     });
     const wishlistData = await wishlistRes.json()
+    console.log("Full Wishlist Data:", wishlistData); 
   const wishlistIds = wishlistData?.data?.map((item: any) => item._id) || [];
   return <>
 <div className='container py-8 mx-auto'>

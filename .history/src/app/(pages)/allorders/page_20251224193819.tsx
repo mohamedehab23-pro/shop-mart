@@ -16,7 +16,7 @@ import Image from 'next/image'
 
 export default function AllOrders() {
 const [allOrdersData, setAllOrdersData] = useState<allordersI[]| null>(null)
-
+const baseUrl=process.env.NEXT_URL
   const [isloading, setIsLoading] = useState(false)
 async function GetUserOrders() {
   setIsLoading(true)
