@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/accordion"
 import { ShoppingCartIcon } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function AllOrders() {
 const [allOrdersData, setAllOrdersData] = useState<allordersI[]| null>(null)

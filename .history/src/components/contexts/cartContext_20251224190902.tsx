@@ -29,7 +29,7 @@ export default function CartContextProvider({children}:{children:ReactNode}){
     const baseUrl=process.env.NEXT_URL
 async function getCart(){
 
-const response= await fetch(`${baseUrl}/api/get-cart`)
+const response= await fetch(`/api/get-cart`)
  const data=await response.json()
 setCartOwner(data.cartOwner)
  

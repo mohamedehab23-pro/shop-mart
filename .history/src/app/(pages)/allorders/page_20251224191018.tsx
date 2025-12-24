@@ -2,7 +2,8 @@
 import Loading from '@/app/loading'
 import { Button } from '@/components/ui/button'
 import { allordersI } from '@/interfaces'
-
+import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import {
   Accordion,
@@ -11,8 +12,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { ShoppingCartIcon } from 'lucide-react'
-import Link from 'next/link'
-import Image from 'next/image'
 
 export default function AllOrders() {
 const [allOrdersData, setAllOrdersData] = useState<allordersI[]| null>(null)
