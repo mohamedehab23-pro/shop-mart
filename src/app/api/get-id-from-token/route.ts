@@ -10,5 +10,7 @@ export async function GET(){
   }
 })
 const data=await response.json()
+console.log(data.decoded.id);
+
 return NextResponse.json(data.decoded.id)
 }

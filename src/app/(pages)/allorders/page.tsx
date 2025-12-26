@@ -21,9 +21,9 @@ const [allOrdersData, setAllOrdersData] = useState<allordersI[]| null>(null)
 async function GetUserOrders() {
   setIsLoading(true)
         const idResponse = await fetch(`/api/get-id-from-token`)
-        const userId = await idResponse.json()
+        const userId = await idResponse.json()      
         const res = await fetch(`https://ecommerce.routemisr.com/api/v1/orders/user/${userId}`)
-        const data = await res.json()
+        const data = await res.json() 
         setAllOrdersData(data)
       
         setIsLoading(false)
@@ -37,7 +37,7 @@ async function GetUserOrders() {
        {allOrdersData?.length==0?isloading?<Loading/>:
         <div className='min-h-[75vh] flex justify-center flex-col items-center'>
 
-  <h2 className='orderscover size-85'></h2>
+  <h2 className='orderscover size-60 lg:size-85'></h2>
 
         <h2 className='font-bold text-4xl pb-3'>No orders placed yet</h2>
         <p className='pb-7 font-medium pt-3 text-xl'>Discover and create your orders</p>
